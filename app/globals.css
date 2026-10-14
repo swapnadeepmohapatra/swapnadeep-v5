@@ -235,7 +235,7 @@ button, input, textarea { font: inherit; }
 .frame::before, .frame::after { content: ""; position: absolute; width: 28px; height: 28px; border: 2px solid var(--yellow); }
 .frame::before { left: 0; top: 0; border-right: 0; border-bottom: 0; }
 .frame::after { right: 0; bottom: 0; border-left: 0; border-top: 0; }
-.frame img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: top; }
+.frame img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: top; }
 .jr-desc { margin: 0 0 26px; max-width: 64ch; color: var(--fg); }
 
 /* perks */
