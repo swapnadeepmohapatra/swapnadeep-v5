@@ -8,13 +8,13 @@ const mono = Share_Tech_Mono({ variable: "--font-mono", subsets: ["latin"], weig
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://swapnadeep.com"),
-  title: "Swapnadeep Mohapatra — Full Stack Developer",
+  title: "Swapnadeep Mohapatra — Software Engineer",
   description:
-    "Hi! I am Swapnadeep Mohapatra. A software developer working on frontend, backend and design.",
+    "Hi! I am Swapnadeep Mohapatra, a Software Engineer at Segwise.ai building AI-powered products across frontend, backend and data.",
   openGraph: {
     title: "Swapnadeep Mohapatra",
     description:
-      "Hi! I am Swapnadeep Mohapatra. A software developer working on frontend, backend and design.",
+      "Hi! I am Swapnadeep Mohapatra, a Software Engineer at Segwise.ai building AI-powered products across frontend, backend and data.",
     type: "website",
     images: "/og.png",
   },

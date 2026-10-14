@@ -6,13 +6,14 @@ import freelance from "@/public/work/freelance.jpg";
 import hackstrap from "@/public/work/hackstrap.png";
 import kodekarma from "@/public/work/kodekarma.png";
 import segwise from "@/public/work/segwise.png";
+import segwiseSde from "@/public/work/segwise-sde.png";
 
 export const EMAIL = "hello@swapnadeep.com";
 export const RESUME_URL = "/Swapnadeep_Mohapatra_8763039380_Resume.pdf";
 export const SUPPORT_URL = "https://payments.cashfree.com/forms/swapnadeep-donate";
 
 export const bio =
-  "I am a final-year student at KIIT University. I really love to build awesome stuff. Beyond building, I'm passionate about giving technical talks. Building scalable systems is my forte. When I'm not coding, you'll find me in a café, lost in a book, or I'm out travelling because I'm an excursionist at heart.";
+  "I am a Software Engineer at Segwise.ai and a 2026 B.Tech CS graduate of KIIT University. I really love to build awesome stuff. Beyond building, I'm passionate about giving technical talks. Building scalable systems is my forte. When I'm not coding, you'll find me in a café, lost in a book, or I'm out travelling because I'm an excursionist at heart.";
 
 export const stats = [
   { value: "2018", label: "First app shipped" },
@@ -35,16 +36,26 @@ export const work: {
   image: StaticImageData;
 }[] = [
   {
+    id: "segwise-sde",
+    company: "Segwise.ai",
+    role: "Software Development Engineer (SDE)",
+    time: "July 2026 – Present",
+    tab: "AI ad platform",
+    tone: "grape",
+    desc: "Building a platform that helps marketers generate winning ads, backed by their data.",
+    stack: ["Go", "TypeScript", "React", "Python", "PostgreSQL", "ClickHouse", "Claude", "Codex", "Custom harness"],
+    image: segwiseSde,
+  },
+  {
     id: "segwise",
     company: "Segwise.ai",
     role: "Software Engineering Intern",
-    time: "April 2025 – Present",
+    time: "April 2025 – July 2026",
     tab: "Ad analytics",
-    tone: "grape",
+    tone: "blue",
     desc: "Built a co-pilot for ad creative analytics.",
-    stack: ["React", "TypeScript", "GoLang"],
+    stack: ["React", "TypeScript", "Go"],
     image: segwise,
-    
   },
   {
     id: "kodekarma",
@@ -52,11 +63,10 @@ export const work: {
     role: "Full Stack Developer",
     time: "Jan 2025 – April 2025",
     tab: "Coding platform",
-    tone: "blue",
+    tone: "butter",
     desc: "Engineered a coding platform from the ground up, serving 20,000+ monthly active users. Integrated GraphQL to reduce network calls, optimizing performance and improving LCP, CLS, and other core web vitals for a seamless user experience.",
     stack: ["React", "Next.js", "TypeScript", "GraphQL"],
     image: kodekarma,
-    
   },
   {
     id: "feemonk",
@@ -68,7 +78,6 @@ export const work: {
     desc: "Built the frontend of a customer-facing web and mobile app for a FinTech product. Worked with critical data like PAN, Aadhaar and eMandate. Also built end-to-end internal tools for analytics and loan application approval.",
     stack: ["React", "React Native", "NestJS", "Redux", "Node.js", "MongoDB", "Sass", "TypeScript"],
     image: feemonk,
-    
   },
   {
     id: "hackstrap",
@@ -80,7 +89,6 @@ export const work: {
     desc: "Developed the backend and frontend for a Kanban-style list-making application, and the frontend of a SaaS product that helps startups accelerate their growth. Integrated a chatbot and the Razorpay payment gateway.",
     stack: ["React", "Redux", "Node.js", "MongoDB", "Sass", "TypeScript"],
     image: hackstrap,
-    
   },
   {
     id: "freelance",
@@ -92,11 +100,16 @@ export const work: {
     desc: "Made Android apps and served clients all across the country. Published more than 10 apps on the Google Play Store, with 10,000+ installs and 500+ active users.",
     stack: ["Java", "Android", "Vanilla JS", "Firebase", "IoT"],
     image: freelance,
-    
   },
 ];
 
 export const expertise: { area: string; tag: string; tone: Tone; note: string }[] = [
+  {
+    area: "AI & LLMs",
+    tag: "Claude · Codex",
+    tone: "grape",
+    note: "Building AI-powered products with Claude, Codex and a custom agent harness, including a platform that helps marketers generate winning ads backed by their own data.",
+  },
   {
     area: "Frontend",
     tag: "4+ years",
@@ -105,9 +118,9 @@ export const expertise: { area: string; tag: string; tone: Tone; note: string }[
   },
   {
     area: "Backend",
-    tag: "Node.js · Spring Boot",
+    tag: "Go · Node.js · Spring Boot",
     tone: "peri",
-    note: "Building robust, scalable backend services using Node.js (Express, Nest.js) and Java Spring Boot. Experienced in designing RESTful and GraphQL APIs for high-performance applications.",
+    note: "Building robust, scalable backend services using Go, Node.js (Express, Nest.js) and Java Spring Boot. Experienced in designing RESTful and GraphQL APIs for high-performance applications.",
   },
   {
     area: "GraphQL & APIs",
@@ -135,9 +148,9 @@ export const expertise: { area: string; tag: string; tone: Tone; note: string }[
   },
   {
     area: "Databases & Storage",
-    tag: "SQL · NoSQL",
+    tag: "OLTP · OLAP · NoSQL",
     tone: "peri",
-    note: "Working with MongoDB, PostgreSQL, MySQL and other NoSQL solutions. Also skilled in caching and real-time data handling using Redis, Kafka, and Elasticsearch.",
+    note: "Working with PostgreSQL, ClickHouse for analytics, MongoDB, MySQL and other NoSQL solutions. Also skilled in caching and real-time data handling using Redis, Kafka, and Elasticsearch.",
   },
   {
     area: "UI/UX & Design",
@@ -148,10 +161,11 @@ export const expertise: { area: string; tag: string; tone: Tone; note: string }[
 ];
 
 export const toolkit: { label: string; kind: string; items: string[] }[] = [
-  { label: "Languages", kind: "lang", items: ["JavaScript", "TypeScript", "Java", "Go", "Python"] },
+  { label: "Languages", kind: "lang", items: ["Go", "TypeScript", "JavaScript", "Python", "Java"] },
   { label: "Frontend", kind: "front", items: ["React", "Next.js", "React Native", "Redux", "Zustand"] },
   { label: "Backend", kind: "back", items: ["Node.js", "NestJS", "Spring Boot", "GraphQL"] },
-  { label: "Data", kind: "db", items: ["MongoDB", "PostgreSQL", "MySQL", "Redis", "Kafka"] },
+  { label: "AI", kind: "ai", items: ["Claude", "Codex", "Custom harness"] },
+  { label: "Data", kind: "db", items: ["PostgreSQL", "ClickHouse", "MongoDB", "Redis", "Kafka", "MySQL"] },
   { label: "Cloud & DevOps", kind: "collab", items: ["AWS", "Docker", "Kubernetes", "GitHub Actions"] },
   { label: "Tools", kind: "tools", items: ["Git", "Figma", "Postman", "VS Code", "Jest"] },
 ];

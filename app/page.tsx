@@ -64,7 +64,7 @@ export default function Home() {
                 Swapnadeep <span>Mohapatra</span>
               </h1>
               <p className="role-line">
-                Full Stack Developer <span aria-hidden="true">/</span> Frontend · Backend · Design
+                Software Engineer <span aria-hidden="true">/</span> Frontend · Backend · AI
               </p>
               <p className="lede">
                 <strong>I build things for the web.</strong> Scalable systems, sharp interfaces, and the occasional
@@ -86,9 +86,9 @@ export default function Home() {
               </div>
               <dl className="id-rows">
                 <div><dt>Name</dt><dd>Swapnadeep Mohapatra</dd></div>
-                <div><dt>Class</dt><dd>Full Stack Developer</dd></div>
+                <div><dt>Class</dt><dd>Software Engineer</dd></div>
                 <div><dt>Affiliation</dt><dd>{current?.company ?? "Independent"}</dd></div>
-                <div><dt>Education</dt><dd>KIIT University</dd></div>
+                <div><dt>Education</dt><dd>KIIT University &apos;26</dd></div>
                 <div><dt>Handle</dt><dd>@swapnadeeptukk</dd></div>
               </dl>
             </aside>
