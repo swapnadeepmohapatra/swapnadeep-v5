@@ -4,7 +4,7 @@ import { CopyEmail } from "@/components/CopyEmail";
 import { Journal } from "@/components/Journal";
 import { Loadout } from "@/components/Loadout";
 import { ToastProvider } from "@/components/Toast";
-import { bio, expertise, handles, RESUME_URL, stats, SUPPORT_URL, work } from "@/lib/data";
+import { bio, DESCRIPTION, EMAIL, expertise, handles, NAME, RESUME_URL, SITE_URL, stats, SUPPORT_URL, work } from "@/lib/data";
 import portrait from "@/public/profile.png";
 
 const sections = [
@@ -27,9 +27,25 @@ function SectionHead({ n, title, note }: { n: number; title: string; note: strin
 
 export default function Home() {
   const current = work.find((w) => w.time.includes("Present"));
+  const person = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: NAME,
+    url: SITE_URL,
+    image: `${SITE_URL}${portrait.src}`,
+    email: `mailto:${EMAIL}`,
+    jobTitle: "Software Engineer",
+    description: DESCRIPTION,
+    worksFor: { "@type": "Organization", name: "Segwise", url: "https://segwise.ai" },
+    alumniOf: { "@type": "CollegeOrUniversity", name: "KIIT University" },
+    address: { "@type": "PostalAddress", addressLocality: "Bengaluru", addressCountry: "IN" },
+    knowsAbout: expertise.map((e) => e.area),
+    sameAs: handles.filter((h) => h.href.startsWith("http")).map((h) => h.href),
+  };
 
   return (
     <ToastProvider>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(person) }} />
       <a className="skip" href="#profile">Skip to content</a>
 
       <header className="hud">

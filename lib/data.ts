@@ -8,6 +8,12 @@ import kodekarma from "@/public/work/kodekarma.png";
 import segwise from "@/public/work/segwise.png";
 import segwiseSde from "@/public/work/segwise-sde.png";
 
+export const SITE_URL = "https://swapnadeep.com";
+export const NAME = "Swapnadeep Mohapatra";
+export const TITLE = `${NAME} — Software Engineer`;
+export const DESCRIPTION =
+  "Hi! I am Swapnadeep Mohapatra, a Software Engineer at Segwise.ai building AI-powered products across frontend, backend and data.";
+
 export const EMAIL = "hello@swapnadeep.com";
 export const RESUME_URL = "/Swapnadeep_Mohapatra_8763039380_Resume.pdf";
 export const SUPPORT_URL = "https://payments.cashfree.com/forms/swapnadeep-donate";

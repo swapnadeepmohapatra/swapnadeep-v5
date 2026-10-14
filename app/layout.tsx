@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Chakra_Petch, Orbitron, Share_Tech_Mono } from "next/font/google";
+import { DESCRIPTION, NAME, SITE_URL, TITLE } from "@/lib/data";
 import "./globals.css";
 
 const sans = Chakra_Petch({ variable: "--font-sans", subsets: ["latin"], weight: ["400", "500", "600", "700"] });
@@ -7,21 +8,58 @@ const display = Orbitron({ variable: "--font-display", subsets: ["latin"], weigh
 const mono = Share_Tech_Mono({ variable: "--font-mono", subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://swapnadeep.com"),
-  title: "Swapnadeep Mohapatra — Software Engineer",
-  description:
-    "Hi! I am Swapnadeep Mohapatra, a Software Engineer at Segwise.ai building AI-powered products across frontend, backend and data.",
-  openGraph: {
-    title: "Swapnadeep Mohapatra",
-    description:
-      "Hi! I am Swapnadeep Mohapatra, a Software Engineer at Segwise.ai building AI-powered products across frontend, backend and data.",
-    type: "website",
-    images: "/og.png",
+  metadataBase: new URL(SITE_URL),
+  title: { default: TITLE, template: `%s — ${NAME}` },
+  description: DESCRIPTION,
+  applicationName: NAME,
+  authors: [{ name: NAME, url: SITE_URL }],
+  creator: NAME,
+  publisher: NAME,
+  category: "technology",
+  keywords: [
+    "Swapnadeep",
+    "Swapnadeep Mohapatra",
+    "Software Engineer",
+    "Segwise",
+    "Full Stack Developer",
+    "Go",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Node.js",
+    "GraphQL",
+    "PostgreSQL",
+    "ClickHouse",
+    "AI",
+    "Bengaluru",
+  ],
+  alternates: { canonical: "/" },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
   },
-  twitter: { card: "summary_large_image", creator: "@swapnadeeptukk" },
+  openGraph: {
+    type: "profile",
+    url: "/",
+    siteName: NAME,
+    title: TITLE,
+    description: DESCRIPTION,
+    locale: "en_US",
+    firstName: "Swapnadeep",
+    lastName: "Mohapatra",
+    username: "swapnadeeptukk",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@swapnadeeptukk",
+    creator: "@swapnadeeptukk",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
 };
 
-export const viewport: Viewport = { themeColor: "#050508" };
+export const viewport: Viewport = { themeColor: "#07070a" };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
