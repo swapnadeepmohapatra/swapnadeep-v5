@@ -9,6 +9,9 @@ import segwise from "@/public/work/segwise.png";
 import segwiseSde from "@/public/work/segwise-sde.png";
 
 export const SITE_URL = "https://swapnadeep.com";
+// Where this build is actually served (Netlify sets URL at build time). Asset URLs
+// like og:image must resolve here, while canonical links stay on SITE_URL.
+export const DEPLOY_URL = process.env.URL ?? SITE_URL;
 export const NAME = "Swapnadeep Mohapatra";
 export const TITLE = `${NAME} — Software Engineer`;
 export const DESCRIPTION =

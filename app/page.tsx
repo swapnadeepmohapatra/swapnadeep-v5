@@ -4,7 +4,7 @@ import { CopyEmail } from "@/components/CopyEmail";
 import { Journal } from "@/components/Journal";
 import { Loadout } from "@/components/Loadout";
 import { ToastProvider } from "@/components/Toast";
-import { bio, DESCRIPTION, EMAIL, expertise, handles, NAME, RESUME_URL, SITE_URL, stats, SUPPORT_URL, work } from "@/lib/data";
+import { bio, DEPLOY_URL, DESCRIPTION, EMAIL, expertise, handles, NAME, RESUME_URL, SITE_URL, stats, SUPPORT_URL, work } from "@/lib/data";
 import portrait from "@/public/profile.png";
 
 const sections = [
@@ -32,7 +32,7 @@ export default function Home() {
     "@type": "Person",
     name: NAME,
     url: SITE_URL,
-    image: `${SITE_URL}${portrait.src}`,
+    image: `${DEPLOY_URL}${portrait.src}`,
     email: `mailto:${EMAIL}`,
     jobTitle: "Software Engineer",
     description: DESCRIPTION,

@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Chakra_Petch, Orbitron, Share_Tech_Mono } from "next/font/google";
-import { DESCRIPTION, NAME, SITE_URL, TITLE } from "@/lib/data";
+import { DEPLOY_URL, DESCRIPTION, NAME, SITE_URL, TITLE } from "@/lib/data";
 import "./globals.css";
 
 const sans = Chakra_Petch({ variable: "--font-sans", subsets: ["latin"], weight: ["400", "500", "600", "700"] });
@@ -8,7 +8,7 @@ const display = Orbitron({ variable: "--font-display", subsets: ["latin"], weigh
 const mono = Share_Tech_Mono({ variable: "--font-mono", subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
+  metadataBase: new URL(DEPLOY_URL),
   title: { default: TITLE, template: `%s — ${NAME}` },
   description: DESCRIPTION,
   applicationName: NAME,
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     "AI",
     "Bengaluru",
   ],
-  alternates: { canonical: "/" },
+  alternates: { canonical: SITE_URL },
   robots: {
     index: true,
     follow: true,
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "profile",
-    url: "/",
+    url: SITE_URL,
     siteName: NAME,
     title: TITLE,
     description: DESCRIPTION,
